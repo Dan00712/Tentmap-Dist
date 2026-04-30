@@ -9,7 +9,7 @@ dependencies=[
     "numpy",
     "matplotlib",
 ]
-version="0.0.1"
+version="0.1.0"
 authors = [
     {name="percy", email="dan.steinmaurer@gmail.com"},
 ]
