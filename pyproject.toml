@@ -1,0 +1,19 @@
+
+[build-system]
+requires=["setuptools >= 77.0.3"]
+build-backend="setuptools.build_meta"
+
+[project]
+name="Tentmap-Distribution"
+dependencies=[
+    "numpy",
+    "matplotlib",
+]
+version="0.0.1"
+authors = [
+    {name="percy", email="dan.steinmaurer@gmail.com"},
+]
+
+[options]
+package_dir={"" = "src"}
+
