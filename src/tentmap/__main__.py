@@ -12,9 +12,9 @@ parser = argparse.ArgumentParser(
 parser.add_argument("outfile", type=Path)
 args = parser.parse_args()
 
-x0s = np.linspace(0, 1, 1000)
-As = np.linspace(1, 2, 50)
-N = 500
+x0s = np.linspace(0, 1, 120)
+As = np.linspace(1, 2, 150)
+N = 200
 
 data = d.get_data_anal(
         x0s = x0s,
@@ -33,10 +33,12 @@ ax1.set_xlabel("A")
 ax1.set_ylabel("x")
 
 
-for i in [10, 40]:
+for i in [10, -3]:
     A = As[i]
     dist = data[:, i]
-    ax2.plot(x0s, dist, label=f"A={round(A, ndigits=2)}")
+    ax2.plot(x0s[3:], dist[3:], label=f"A={round(A, ndigits=2)}")
+ax2.set_ylabel("p(x)")
+ax2.set_xlabel("x")
 ax2.legend()
 
 plt.savefig(args.outfile)
